@@ -19,3 +19,9 @@ end
 ```
 
 Delete `app/assets` folder.
+
+Install TypeScript:
+
+```
+rails webpacker:install:typescript
+```
