@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+rails new rails-react-vite --webpack=react --skip-sprockets
+```
 
-Things you may want to cover:
+In `app/views/layouts/application.html.erb`, comment out:
 
-* Ruby version
+```erb
+<%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+```
 
-* System dependencies
+In `config/application.rb`, add:
 
-* Configuration
+```rb
+config.generators do |g|
+  g.assets false
+end
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Delete `app/assets` folder.
